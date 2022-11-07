@@ -9,8 +9,6 @@ def solution(nums):
         else:
             numsDict[i] = 1
     
-    print(numsDict)
-    
     for key, value in numsDict.items():
         if len(pokemon) == (len(nums) // 2):
             break
