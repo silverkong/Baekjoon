@@ -10,8 +10,8 @@ for _ in range(T):
     # 배열에 들어간 수의 개수
     n = int(input())
     # 배열에 들어 있는 정수 리스트 받고 양 옆의 '[', ']' 자르기
-    x = sys.stdin.readline().rstrip()[1:-1].split(',')
-
+    x = sys.stdin.readline()[1:-2].split(',')
+    
     # 큐에 리스트 넣어주기
     queue = deque(x)
     # n이 0이라면 빈 큐로 초기화(길이가 1인 큐)
