@@ -1,5 +1,4 @@
 from collections import deque
-import sys
 
 # 이동할 4가지 방향 정의
 dx = [-1, 1, 0, 0]
@@ -28,7 +27,7 @@ def bfs(x, y):
     return maze[N - 1][M - 1]
 
 # N, M를 공백을 기준으로 입력 받기
-N, M = map(int, sys.stdin.readline().split())
+N, M = map(int, input().split())
 
 # 미로 만들기
 maze = [list(map(int, input())) for _ in range(N)]
