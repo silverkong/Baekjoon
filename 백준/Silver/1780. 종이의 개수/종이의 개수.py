@@ -7,15 +7,17 @@ def cut(x, y, n):
     for i in range(x, x + n):
         for j in range(y, y + n):
             if check != paper[i][j]:
-                cut(x, y, n//3)
-                cut(x + n//3, y, n//3)
-                cut(x + (n//3 * 2), y, n//3)
-                cut(x, y + n//3, n//3)
-                cut(x + n//3, y + n//3, n//3)
-                cut(x + (n//3 * 2), y + n//3, n//3)
-                cut(x, y + (n//3 * 2), n//3)
-                cut(x + n//3, y + (n//3 * 2), n//3)
-                cut(x + (n//3 * 2), y + (n//3 * 2), n//3)
+                n1 = n//3
+                n2 = n//3 * 2
+                cut(x, y, n1)
+                cut(x + n1, y, n1)
+                cut(x + n2, y, n1)
+                cut(x, y + n1, n1)
+                cut(x + n1, y + n1, n1)
+                cut(x + n2, y + n1, n1)
+                cut(x, y + n2, n1)
+                cut(x + n1, y + n2, n1)
+                cut(x + n2, y + n2, n1)
                 return
               
     if check == -1:
