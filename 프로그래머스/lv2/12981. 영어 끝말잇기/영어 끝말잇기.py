@@ -4,15 +4,11 @@ def solution(n, words):
 
     for i in range(len(words)):
         if words[i] in count:
-            no = (i % n) + 1
-            order = (i // n) + 1
-            answer = [no, order]
+            answer = [(i % n) + 1, (i // n) + 1]
             break
         
         if i != 0 and words[i - 1][-1:] != words[i][:1]:
-            no = (i % n) + 1
-            order = (i // n) + 1
-            answer = [no, order]
+            answer = [(i % n) + 1, (i // n) + 1]
             break
         
         count[words[i]] = 1
